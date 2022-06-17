@@ -1,7 +1,14 @@
 name: ScreenShot
 
 on:
-  [ push, pull_request, workflow_dispatch ]
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+  schedule:
+  - cron: "56 */8 * * *"
 
 jobs:
   screenshot:
@@ -18,6 +25,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Install Dependencies
+      run: |
+        FILE=saved
+        if [ ! -d "$FILE" ]; then
+          echo "$FILE does not exist."
+          mkdir saved
+        fi
+    
     - name: Capture Screenshot
       id: screenshot
       uses: swinton/screenshot-website@v1.x
@@ -25,6 +40,7 @@ jobs:
         source: ${{ matrix.url }}
         destination: ./saved/${{ matrix.save_path }}/screenshot.png
         full-page: true
+      
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: 'docs: Update ScreenShots [skip ci]'
