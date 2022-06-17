@@ -30,7 +30,6 @@ jobs:
         FILE=saved
         if [ ! -d "$FILE" ]; then
           echo "$FILE does not exist."
-          mkdir saved
         fi
     
     - name: Capture Screenshot
@@ -38,7 +37,7 @@ jobs:
       uses: swinton/screenshot-website@v1.x
       with:
         source: ${{ matrix.url }}
-        destination: ./saved/${{ matrix.save_path }}/screenshot.png
+        destination: ${{ matrix.save_path }}-screenshot.png
         full-page: true
       
     - uses: stefanzweifel/git-auto-commit-action@v4
