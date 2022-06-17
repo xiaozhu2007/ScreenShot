@@ -5,10 +5,10 @@ on:
 
 jobs:
   screenshot:
-    name: Screenshot (Windows 2022)
+    name: Screenshot
     strategy:
       matrix:
-        os: [windows-latest]
+        os: [ubuntu-latest]
         url: ["https://github.com/xiaozhu2007"]
         save_path: ["github-xiaozhu2007"]
     runs-on: ${{ matrix.os }}
