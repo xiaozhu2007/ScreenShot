@@ -1,0 +1,34 @@
+name: ScreenShot
+
+on:
+  [ push, pull_request, workflow_dispatch ]
+
+jobs:
+  screenshot:
+    name: Screenshot (Windows 2022)
+    strategy:
+      matrix:
+        os: [windows-latest]
+        url: ["https://github.com/xiaozhu2007"]
+        save_path: ["github-xiaozhu2007"]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Capture Screenshot
+      id: screenshot
+      uses: swinton/screenshot-website@v1.x
+      with:
+        source: ${{ matrix.url }}
+        destination: ./saved/${{ matrix.save_path }}/screenshot.png
+        full-page: true
+    - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'docs: Update ScreenShots [skip ci]'
+          branch: master
+          commit_user_name: AGDDoS-bot
+          commit_user_email: 3356136957@qq.com
+          commit_author: AGDDoS-bot <3356136957@qq.com>
