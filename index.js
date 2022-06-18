@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const ora  = require('ora');
-const fs = require('fs'); 
 const path = require('path');
 const chalk = require('chalk');
 const spinner = ora('Loading puppeteer...').start();
