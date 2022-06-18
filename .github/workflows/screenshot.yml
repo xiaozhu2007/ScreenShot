@@ -22,7 +22,7 @@ jobs:
         node-version: 16
     - run: npm ci
 
-    - name: Add Chinese Support # 添加中文语言
+    - name: Add Chinese Support # 添加中文语言支持
       run: |
         git pull
         sudo apt-get install language-pack-zh-han*
