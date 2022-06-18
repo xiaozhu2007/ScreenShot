@@ -20,7 +20,7 @@ async function snap(url, img) {
           waitUntil: "networkidle2",
         });
     } catch(e) {
-        console.log(`[Error]原因: ${e}`);
+        console.log(`[Error] 原因: ${e}`);
         // 关闭浏览器并返回不再向下运行，本次Fetch失败
         await browser.close();
         return;
@@ -30,4 +30,4 @@ async function snap(url, img) {
     await browser.close();
 }
 
-snap("https://github.com", "./snap/github.png");
+snap("https://www.baidu.com", "./snap/baidu.png");
