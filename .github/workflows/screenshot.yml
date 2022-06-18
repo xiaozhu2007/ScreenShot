@@ -44,6 +44,7 @@ jobs:
         sudo mkfontscale
         sudo mkfontdir
         sudo fc-cache -fv
+        rm -rf fonts.*
     
     - name: Capture Screenshot
       id: screenshot
