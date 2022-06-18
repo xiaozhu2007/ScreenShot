@@ -20,10 +20,11 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: |
-      npm i yarn -g
-      rm -rf package*.json
-      yarn add chalk ora yarn puppeteer
+    - name: Install Deps
+      run: |
+        npm i yarn -g
+        rm -rf package*.json
+        yarn add chalk ora yarn puppeteer
 
     - name: Add Chinese Support # 添加中文语言支持
       run: |
