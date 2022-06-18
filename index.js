@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-const ora  = require('ora');
+import ora from 'ora';
 const path = require('path');
 const chalk = require('chalk');
 const spinner = ora('Loading puppeteer...').start();
@@ -45,3 +45,4 @@ async function snap(url, save_to, save_pdf_to = save_to) {
 }
 
 snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
+snap('https://xiaozhu2007.github.io/', './snap/xiaozhu2007-blog.png', './pdf/xiaozhu2007-blog.pdf');
