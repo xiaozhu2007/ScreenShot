@@ -49,6 +49,7 @@ jobs:
     - name: Capture Screenshot
       id: screenshot
       run: |
+        rm -rf snap/*.png pdf/*.pdf # 删除旧的
         node index.js
       
     - uses: stefanzweifel/git-auto-commit-action@v4
