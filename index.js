@@ -31,7 +31,7 @@ async function snap(url, save_to, save_pdf_to = save_to) {
 
     page.once('load', () => console.log('Page loaded!'));
 
-    page.waitForTimeout(5000).then(() => console.log('[INFO] Waited 5 second, now let\'s snap and save!'));
+    page.waitForTimeout(8000).then(() => console.log('[INFO] Waited 8 second, now let\'s snap and save!')); // 考虑到部分网站JavaScript加载延时
 
     await page.screenshot({ path: save_to, fullPage: true});
 
