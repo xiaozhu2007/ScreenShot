@@ -31,6 +31,8 @@ async function snap(url, save_to, save_pdf_to = save_to) {
 
     page.once('load', () => console.log('Page loaded!'));
 
+    page.waitForTimeout(5000).then(() => console.log('[INFO] Waited 5 second, now let\'s snap and save!'));
+
     await page.screenshot({ path: save_to, fullPage: true});
 
     await page.pdf({
