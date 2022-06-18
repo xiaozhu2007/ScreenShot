@@ -13,32 +13,19 @@ on:
 jobs:
   screenshot:
     name: Screenshot
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        url: ["https://github.com/xiaozhu2007"]
-        save_path: ["github-xiaozhu2007"]
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     steps:
-
-    - name: Checkout
-      uses: actions/checkout@v3
-
-    - name: Install Dependencies
-      run: |
-        FILE=saved
-        if [ ! -d "$FILE" ]; then
-          echo "$FILE does not exist."
-        fi
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - run: npm i puppeteer
     
     - name: Capture Screenshot
       id: screenshot
-      uses: swinton/screenshot-website@v1.x
-      with:
-        source: ${{ matrix.url }}
-        destination: ${{ matrix.save_path }}-screenshot.png
-        full-page: true
+      run: |
+        node index.js
       
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
