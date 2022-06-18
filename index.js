@@ -30,4 +30,4 @@ async function snap(url, img) {
     await browser.close();
 }
 
-await snap("https://github.com", "./snap/github.png");
+snap("https://github.com", "./snap/github.png");
