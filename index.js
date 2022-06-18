@@ -19,12 +19,12 @@ async function snap(url, img) {
         await page.goto(url, {
           waitUntil: "networkidle2",
         });
-      } catch(e) {
-        console.log("页面无法访问！");
+    } catch(e) {
+        console.log(`[Error]原因: ${e}`);
         // 关闭浏览器并返回不再向下运行，本次Fetch失败
         await browser.close();
         return;
-      }
+    }
     // page.once('load', () => console.log('Page loaded!'));
     await page.screenshot({ path: img, fullPage: true});
     await browser.close();
