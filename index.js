@@ -45,4 +45,4 @@ async function snap(url, save_to, save_pdf_to = save_to) {
 
 snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
 
-snap('https://xiaozhu2007.github.io/', './snap/xiaozhu2007-blog.png', './pdf/xiaozhu2007-blog.pdf');
+snap('https://xzblog.vercel.app/', './snap/xiaozhu2007-blog-vercel.png', './pdf/xiaozhu2007-blog-vercel.pdf');
