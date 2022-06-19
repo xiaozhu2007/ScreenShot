@@ -31,7 +31,8 @@ jobs:
 
     - name: Add Chinese Support # 添加中文语言支持
       run: |
-        git pull
+        git remote -v  # 查看信息
+        git pull origin master
         sudo apt-get install language-pack-zh-han*
         sudo apt-get install ttf-mscorefonts-installer
         sudo apt-get install fontconfig
