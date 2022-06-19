@@ -12,7 +12,10 @@ PR状态: **允许** 添加截图请求
 
 默认大小1024\*655
 
-示例
-`https://cdn.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu.com.png`
+示例：`https://cdn.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu.com.png`
 
-![Baidu.com](https://cdn.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu.com.png)
+![Baidu.com首页](https://cdn.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu.com.png)
+
+示例：`https://cdn.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/cyfan-blog.png`
+
+![ChenYFan Blog](https://cdn.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/cyfan-blog.png)
