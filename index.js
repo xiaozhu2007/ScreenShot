@@ -56,6 +56,8 @@ async function snap(url, save_to, save_pdf_to = save_to) {
 snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
 // 小猪博客
 snap('https://xzblog.vercel.app/', './snap/xiaozhu2007-blog-vercel.png', './pdf/xiaozhu2007-blog-vercel.pdf');
+// 小猪cnblogs
+snap('https://cnblogs.com/xiaozhu2020/', './snap/xiaozhu2007-blog-cnblogs.png', './pdf/xiaozhu2007-blog-cnblogs.pdf');
 // ChenYFan Blog
 snap('https://blog.cyfan.top/', './snap/cyfan-blog.png', './pdf/cyfan-blog.pdf');
 // 百度实时热搜榜
