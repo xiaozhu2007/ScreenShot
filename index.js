@@ -43,6 +43,13 @@ async function snap(url, save_to, save_pdf_to = save_to) {
     await browser.close();
 }
 
+/**
+ * 请先阅读以下内容再提交PR，否则直接关闭！
+ *
+ */
+// 万能百度
 snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
-
+// 小猪博客
 snap('https://xzblog.vercel.app/', './snap/xiaozhu2007-blog-vercel.png', './pdf/xiaozhu2007-blog-vercel.pdf');
+// ChenYFan Blog
+snap('https://blog.cyfan.top/', './snap/cyfan-blog.png', './pdf/cyfan-blog.pdf');
