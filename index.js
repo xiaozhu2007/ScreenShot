@@ -45,7 +45,12 @@ async function snap(url, save_to, save_pdf_to = save_to) {
 
 /**
  * 请先阅读以下内容再提交PR，否则直接关闭！
- *
+ * 1. 我的PR是为了添加链接
+ * 2. 我同意Github Community Guideline、JSDelivrEULA、
+ *  甜力怕's 隐私政策 和 Chromium的许可证(BSD)
+ * 3. 我愿意使用Fastgit.org 和 Github Pages作为内容分发
+ * 4. 拒绝反动\暴力\色情\宗教\伦理类信息,最好不要推销V·P·N，支持非首页（您可以随时更改），支持但不建议JavaScript动态加载(未来会禁用)
+ * 注意：在您更改后，如果出现反动\暴力\色情\宗教\伦理类信息，则立刻删除，并不给予告知！
  */
 // 万能百度
 snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
@@ -53,3 +58,5 @@ snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
 snap('https://xzblog.vercel.app/', './snap/xiaozhu2007-blog-vercel.png', './pdf/xiaozhu2007-blog-vercel.pdf');
 // ChenYFan Blog
 snap('https://blog.cyfan.top/', './snap/cyfan-blog.png', './pdf/cyfan-blog.pdf');
+// 百度热搜
+snap('https://top.baidu.com/board', './snap/baidu-top.png', './pdf/baidu-top.pdf');
