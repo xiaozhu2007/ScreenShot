@@ -8,7 +8,7 @@ on:
     branches:
     - master
   schedule:
-  - cron: "37 */4 * * *"
+  - cron: "37 */3 * * *"
 
 jobs:
   screenshot:
@@ -23,6 +23,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
+
     - name: Install Deps
       run: |
         npm i yarn --location=global
@@ -52,6 +53,9 @@ jobs:
       run: |
         rm -rf snap/*.png pdf/*.pdf # 删除旧的
         node index.js
+        # 刷新站点缓存
+        curl https://purge.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu-top.png
+        curl https://purge.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu.com.png
       
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
