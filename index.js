@@ -58,5 +58,5 @@ snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
 snap('https://xzblog.vercel.app/', './snap/xiaozhu2007-blog-vercel.png', './pdf/xiaozhu2007-blog-vercel.pdf');
 // ChenYFan Blog
 snap('https://blog.cyfan.top/', './snap/cyfan-blog.png', './pdf/cyfan-blog.pdf');
-// 百度热搜
-snap('https://top.baidu.com/board', './snap/baidu-top.png', './pdf/baidu-top.pdf');
+// 百度实时热搜榜
+snap('https://top.baidu.com/board?tab=realtime', './snap/baidu-top.png', './pdf/baidu-top.pdf');
