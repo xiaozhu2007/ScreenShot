@@ -59,7 +59,7 @@ jobs:
     - name: Prettier check
       uses: actionsx/prettier@v2
       with:
-        args: --check .
+        args: --write .
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: 'docs: Update ScreenShots [skip ci]'
