@@ -27,8 +27,7 @@ jobs:
     - name: Install Deps
       run: |
         npm i yarn --location=global
-        rm -rf package*.json
-        yarn add chalk ora yarn puppeteer
+        npm i puppeteer
 
     - name: Add Chinese Support # 添加中文语言支持
       run: |
@@ -56,10 +55,18 @@ jobs:
         # 刷新站点缓存
         curl https://purge.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu-top.png
         curl https://purge.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu.com.png
-    - name: Prettier check
-      uses: actionsx/prettier@v2
+    - name: Get npm cache directory
+      id: npm-cache-dir
+      run: |
+        echo "::set-output name=dir::$(npm config get cache)"
+    - uses: actions/cache@v3
+      id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
       with:
-        args: --write .
+        path: ${{ steps.npm-cache-dir.outputs.dir }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: 'docs: Update ScreenShots [skip ci]'
