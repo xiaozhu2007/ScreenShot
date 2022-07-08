@@ -379,10 +379,10 @@
     "end-of-stream" "^1.1.0"
     "once" "^1.3.1"
 
-"puppeteer@^15.3.1":
-  "integrity" "sha512-Z+SpYBiS1zUzMXV7Wnhe2pyuVCFAFRTq1UrUWHB2CkLos5v7bXvXYuZ3Fn5pSN5IObxijyx4opNYKTCRnGni6Q=="
-  "resolved" "https://registry.npmjs.org/puppeteer/-/puppeteer-15.3.1.tgz"
-  "version" "15.3.1"
+"puppeteer@^15.3.2":
+  "integrity" "sha512-6z4fTHCHTpG3Yu7zqP0mLfCmkNkgw5KSUfLAwuBabz9Pkqoe0Z08hqUx5GNxhhMgEo4YVOSPBshePA6zliznWQ=="
+  "resolved" "https://registry.npmjs.org/puppeteer/-/puppeteer-15.3.2.tgz"
+  "version" "15.3.2"
   dependencies:
     "cross-fetch" "3.1.5"
     "debug" "4.3.4"
