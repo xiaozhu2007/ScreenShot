@@ -31,7 +31,7 @@ async function snap(url, save_to, save_pdf_to = save_to) {
 
     page.once('load', () => console.log('Page loaded!'));
 
-    page.waitForTimeout(8000).then(() => console.log('[INFO] Waited 8 second, now let\'s snap and save!')); // 考虑到部分网站JavaScript加载延时
+    //page.waitForTimeout(8000).then(() => console.log('[INFO] Waited 8 second, now let\'s snap and save!')); // 考虑到部分网站JavaScript加载延时
 
     await page.screenshot({ path: save_to, fullPage: true});
 
@@ -54,6 +54,8 @@ async function snap(url, save_to, save_pdf_to = save_to) {
  */
 // 万能百度
 snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
+// Pig2333's Blog
+snap('https://xiaozhu2007.netlify.app/', './snap/xiaozhu2007-blog-netlify.png', './pdf/xiaozhu2007-blog-netlify.pdf');
 // 小猪博客
 snap('https://xzblog.vercel.app/', './snap/xiaozhu2007-blog-vercel.png', './pdf/xiaozhu2007-blog-vercel.pdf');
 // 小猪cnblogs
