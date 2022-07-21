@@ -2,7 +2,7 @@
   "dependencies": {
     "chalk": "^5.0.1",
     "ora": "^6.1.2",
-    "puppeteer": "^15.4.0",
+    "puppeteer": "^15.4.1",
     "yarn": "^1.22.19"
   }
 }
