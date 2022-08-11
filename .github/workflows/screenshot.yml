@@ -33,6 +33,7 @@ jobs:
       run: |
         git remote -v  # 查看信息
         git pull origin master
+        curl cip.cc
         sudo apt-get install language-pack-zh-han*
         sudo apt-get install ttf-mscorefonts-installer
         sudo apt-get install fontconfig
