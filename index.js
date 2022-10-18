@@ -65,7 +65,7 @@ snap('https://blog.cyfan.top/', './snap/cyfan-blog.png', './pdf/cyfan-blog.pdf')
 // 百度实时热搜榜
 snap('https://top.baidu.com/board?tab=realtime', './snap/baidu-top.png', './pdf/baidu-top.pdf');
 // Google News - US
-snap('https://news.google.com/home?hl=en-US&gl=US&ceid=US%3Aen', './snap/google-news-us.png', './pdf/google-news-us.pdf');
+snap('https://news.google.com/home?hl=en-US&gl=US&ceid=US%3Aen&v2prv=1', './snap/google-news-us.png', './pdf/google-news-us.pdf');
 // Google News - CN
-snap('https://news.google.com/home?hl=zh-CN&gl=CN&ceid=CN:zh-Hans', './snap/google-news-cn.png', './pdf/google-news-cn.pdf');
+snap('https://news.google.com/home?hl=zh-CN&gl=CN&ceid=CN:zh-Hans&v2prv=1', './snap/google-news-cn.png', './pdf/google-news-cn.pdf');
 
