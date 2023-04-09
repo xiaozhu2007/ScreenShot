@@ -8,7 +8,7 @@ on:
     branches:
     - master
   schedule:
-  - cron: "37 */6 * * *"
+  - cron: "37 */12 * * *"
 
 jobs:
   screenshot:
@@ -32,8 +32,8 @@ jobs:
     - name: Add Chinese Support # 添加中文语言支持
       run: |
         git remote -v  # 查看信息
-        git pull origin master
-        curl cip.cc
+        git pull origin master  # 防止冲突(一般不会)
+        curl cip.cc  # 查看信息
         sudo apt-get install language-pack-zh-han*
         sudo apt-get install ttf-mscorefonts-installer
         sudo apt-get install fontconfig
@@ -49,7 +49,7 @@ jobs:
         rm -rf fonts.*
     
     - name: Capture Screenshot
-      id: screenshot
+      id: capture
       run: |
         rm -rf snap/*.png pdf/*.pdf # 删除旧的
         node index.js
@@ -72,6 +72,6 @@ jobs:
       with:
         commit_message: 'docs: Update ScreenShots [skip ci]'
         branch: master
-        commit_user_name: AGDDoS-bot
+        commit_user_name: ShellC0de
         commit_user_email: 3356136957@qq.com
-        commit_author: AGDDoS-bot <3356136957@qq.com>
+        commit_author: HelloTools-Bot <3356136957@qq.com>
