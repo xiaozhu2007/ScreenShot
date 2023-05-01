@@ -52,14 +52,17 @@ async function snap(url, save_to, save_pdf_to = save_to) {
  * 4. 拒绝反动\暴力\色情\宗教\伦理类信息,支持非首页,支持但不建议 JavaScript 动态加载
  * 注意：在您更改后, 如果出现反动\暴力\色情\宗教\伦理类信息,则立刻删除!
  */
+
+// 项目首页
+snap('https://github.com/xiaozhu2007/ScreenShot/', './snap/index.png', './pdf/index.pdf');
 // 万能百度
 snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
 // HackPig520's Blog
 snap('https://xiaozhu2007.netlify.app/', './snap/xiaozhu2007-blog-netlify.png', './pdf/xiaozhu2007-blog-netlify.pdf');
+// HackPig520 Blog
+snap('https://xiaozhu2007.vercel.app/', './snap/xiaozhu2007-blog-vercel.png', './pdf/xiaozhu2007-blog-vercel.pdf');
 // HackPig520 博客园
 snap('https://cnblogs.com/xiaozhu2020/', './snap/xiaozhu2007-blog-cnblogs.png', './pdf/xiaozhu2007-blog-cnblogs.pdf');
-// ChenYFan Blog
-snap('https://blog.cyfan.top/', './snap/cyfan-blog.png', './pdf/cyfan-blog.pdf');
 // 百度热搜榜
 snap('https://top.baidu.com/board?tab=realtime', './snap/baidu-top.png', './pdf/baidu-top.pdf');
 // Google News - US
