@@ -8,6 +8,18 @@ let date = ("0" + dateObject.getDate()).slice(-2);
 let month = ("0" + (dateObject.getMonth() + 1)).slice(-2);
 let year = dateObject.getFullYear();
 
+fs.exists(`./snap/${year}/${month}/${date}`, (exists) => {
+  if (!exists) {
+    fs.mkdir(`./snap/${year}/${month}/${date}`, { recursive: true }, (err) => { /* Do nothing */ });
+  }
+});
+
+fs.exists(`./pdf/${year}/${month}/${date}`, (exists) => {
+  if (!exists) {
+    fs.mkdir(`./pdf/${year}/${month}/${date}`, { recursive: true }, (err) => { /* Do nothing */ });
+  }
+});
+
 async function snap(url, id) {
     const browser = await puppeteer.launch({
         // 无头模式，不打开浏览器显示脚本运行过程，可以在调试过程中打开
