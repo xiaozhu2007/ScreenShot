@@ -23,7 +23,7 @@ fs.exists(`./pdf/${year}/${month}/${date}`, (exists) => {
 async function snap(url, id) {
     const browser = await puppeteer.launch({
         // 无头模式，不打开浏览器显示脚本运行过程，可以在调试过程中打开
-        headless: true,
+        headless: 'new',
         // 设置浏览器窗口大小
         defaultViewport: {
           width: 1024,
@@ -45,9 +45,9 @@ async function snap(url, id) {
         return;
     }
 
-    page.once('load', () => console.log('Page loaded!'));
+    page.once('load', () => console.log('[INFO] 网页加载成功'));
 
-    //page.waitForTimeout(8000).then(() => console.log('[INFO] Waited 8 second, now let\'s snap and save!')); // 考虑到部分网站 JavaScript 加载延时
+    //page.waitForTimeout(8000).then(() => console.log('[INFO] 已等待 8 秒钟, 开始截图')); // 考虑到部分网站 JavaScript 加载延时
 
     try {
       await page.screenshot({ path: `./snap/${year}/${month}/${date}/${id}-${dateObject.getHours()}.png`, fullPage: false});
@@ -63,13 +63,12 @@ async function snap(url, id) {
 }
 
 /**
- * 请先阅读以下内容再提交PR，否则直接关闭！
- * 1. 我的 PR 是为了添加链接
- * 2. 我同意 Github Community Guideline & JSDelivr EULA &
- *  甜力怕's 隐私政策 和 Chromium 的许可证(BSD)
- * 3. 我愿意使用 JSDelivr 和 HelloToolsCloud 作为内容分发
- * 4. 拒绝反动\暴力\色情\宗教\伦理类信息,支持非首页,支持但不建议 JavaScript 动态加载
- * 注意：在您更改后, 如果出现反动\暴力\色情\宗教\伦理类信息,则立刻删除!
+ * 请先阅读以下内容再提交 Pull Request 否则直接关闭!
+ * 1. 我的 Pull Request 是为了添加链接
+ * 2. 我同意 Github Community Guideline & JSDelivr EULA & Chromium 的许可证(BSD)
+ * 3. 我同意将网站内容永久性保存在 IPFS 链上
+ * 4. 拒绝反动\暴力\色情\宗教\伦理类信息,支持非首页, 支持但不建议 JavaScript 动态加载
+ * 注意：在您更改后, 如果出现反动\暴力\色情\宗教\伦理类信息, 则立刻删除!
  */
 
 // 项目首页
@@ -82,4 +81,3 @@ snap('https://top.baidu.com/board?tab=realtime', 'baidu-top');
 snap('https://news.google.com/home?hl=en-US&gl=US&ceid=US%3Aen&v2prv=1', 'google-news-us');
 // Google News - CN
 snap('https://news.google.com/home?hl=zh-CN&gl=CN&ceid=CN:zh-Hans&v2prv=1', 'google-news-cn');
-
