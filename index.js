@@ -3,8 +3,12 @@ const fs = require('fs');
 const path = require('path');
 
 const isDebugger = false;
+let dateObject = new Date();
+let date = ("0" + dateObject.getDate()).slice(-2);
+let month = ("0" + (dateObject.getMonth() + 1)).slice(-2);
+let year = dateObject.getFullYear();
 
-async function snap(url, save_to, save_pdf_to = save_to) {
+async function snap(url, id) {
     const browser = await puppeteer.launch({
         // 无头模式，不打开浏览器显示脚本运行过程，可以在调试过程中打开
         headless: true,
@@ -31,12 +35,13 @@ async function snap(url, save_to, save_pdf_to = save_to) {
 
     page.once('load', () => console.log('Page loaded!'));
 
-    //page.waitForTimeout(8000).then(() => console.log('[INFO] Waited 8 second, now let\'s snap and save!')); // 考虑到部分网站JavaScript加载延时
+    //page.waitForTimeout(8000).then(() => console.log('[INFO] Waited 8 second, now let\'s snap and save!')); // 考虑到部分网站 JavaScript 加载延时
 
-    await page.screenshot({ path: save_to, fullPage: false});
+    await page.screenshot({ path: `./snap/${year}/${month}/${date}/${id}-${dateObject.getHours()}.png`, fullPage: false});
+    await page.screenshot({ path: `./snap/${year}/${month}/${date}/${id}-${dateObject.getHours()}-full.png`, fullPage: true});
 
     await page.pdf({
-        path: save_pdf_to,
+        path: `./pdf/${year}/${month}/${date}/${id}-${dateObject.getHours()}.png`,
         format: 'a4',
       });
     
@@ -54,19 +59,13 @@ async function snap(url, save_to, save_pdf_to = save_to) {
  */
 
 // 项目首页
-snap('https://github.com/xiaozhu2007/ScreenShot/', './snap/index.png', './pdf/index.pdf');
+snap('https://github.com/xiaozhu2007/ScreenShot/', 'index');
 // 万能百度
-snap('https://www.baidu.com', './snap/baidu.com.png', './pdf/baidu.com.pdf');
-// HackPig520's Blog
-snap('https://xiaozhu2007.netlify.app/', './snap/xiaozhu2007-blog-netlify.png', './pdf/xiaozhu2007-blog-netlify.pdf');
-// HackPig520 Blog
-snap('https://xiaozhu2007.vercel.app/', './snap/xiaozhu2007-blog-vercel.png', './pdf/xiaozhu2007-blog-vercel.pdf');
-// HackPig520 博客园
-snap('https://cnblogs.com/xiaozhu2020/', './snap/xiaozhu2007-blog-cnblogs.png', './pdf/xiaozhu2007-blog-cnblogs.pdf');
+snap('https://www.baidu.com', 'baidu');
 // 百度热搜榜
-snap('https://top.baidu.com/board?tab=realtime', './snap/baidu-top.png', './pdf/baidu-top.pdf');
+snap('https://top.baidu.com/board?tab=realtime', 'baidu-top');
 // Google News - US
-snap('https://news.google.com/home?hl=en-US&gl=US&ceid=US%3Aen&v2prv=1', './snap/google-news-us.png', './pdf/google-news-us.pdf');
+snap('https://news.google.com/home?hl=en-US&gl=US&ceid=US%3Aen&v2prv=1', 'google-news-us');
 // Google News - CN
-snap('https://news.google.com/home?hl=zh-CN&gl=CN&ceid=CN:zh-Hans&v2prv=1', './snap/google-news-cn.png', './pdf/google-news-cn.pdf');
+snap('https://news.google.com/home?hl=zh-CN&gl=CN&ceid=CN:zh-Hans&v2prv=1', 'google-news-cn');
 
