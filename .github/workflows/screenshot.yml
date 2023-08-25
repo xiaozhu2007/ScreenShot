@@ -47,19 +47,17 @@ jobs:
         sudo mkfontdir
         sudo fc-cache -fv
         rm -rf fonts.*
-    
+
     - name: Capture Screenshot
       id: capture
       run: |
-        rm -rf snap/*.png pdf/*.pdf # 删除旧的
         node index.js
-        # 刷新站点缓存
-        curl https://purge.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu-top.png
-        curl https://purge.jsdelivr.net/gh/xiaozhu2007/ScreenShot@master/snap/baidu.com.png
+
     - name: Get npm cache directory
       id: npm-cache-dir
       run: |
         echo "::set-output name=dir::$(npm config get cache)"
+
     - uses: actions/cache@v3
       id: npm-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
       with:
