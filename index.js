@@ -54,7 +54,7 @@ async function snap(url, id) {
       await page.screenshot({ path: `./snap/${year}/${month}/${date}/${id}-${dateObject.getHours()}-full.png`, fullPage: true});
 
       await page.pdf({
-          path: `./pdf/${year}/${month}/${date}/${id}-${dateObject.getHours()}.png`,
+          path: `./pdf/${year}/${month}/${date}/${id}-${dateObject.getHours()}.pdf`,
           format: 'a4',
         });
     } catch (e) {}
