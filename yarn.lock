@@ -538,10 +538,10 @@
     "end-of-stream" "^1.1.0"
     "once" "^1.3.1"
 
-"puppeteer-core@21.5.1":
-  "integrity" "sha512-u6c3SZKAOaOQogaTkQvllxT/o2PP16wkbrUWINtMhfvrB4ko+xwqC1pb+vyCPMmNUh3N/CX5YGqb3DWx2fUPSQ=="
-  "resolved" "https://registry.npmjs.org/puppeteer-core/-/puppeteer-core-21.5.1.tgz"
-  "version" "21.5.1"
+"puppeteer-core@21.5.2":
+  "integrity" "sha512-v4T0cWnujSKs+iEfmb8ccd7u4/x8oblEyKqplqKnJ582Kw8PewYAWvkH4qUWhitN3O2q9RF7dzkvjyK5HbzjLA=="
+  "resolved" "https://registry.npmjs.org/puppeteer-core/-/puppeteer-core-21.5.2.tgz"
+  "version" "21.5.2"
   dependencies:
     "@puppeteer/browsers" "1.8.0"
     "chromium-bidi" "0.4.33"
@@ -550,14 +550,14 @@
     "devtools-protocol" "0.0.1203626"
     "ws" "8.14.2"
 
-"puppeteer@^21.5.1":
-  "integrity" "sha512-NkI06BXckVZeZUkODK+BbgGelQSu7uYEp9PaJDozxpwNRFDYoVfHQvd2G4dERoLdP6+qx4EBPwEhk4dEkQc2Kg=="
-  "resolved" "https://registry.npmjs.org/puppeteer/-/puppeteer-21.5.1.tgz"
-  "version" "21.5.1"
+"puppeteer@^21.5.2":
+  "integrity" "sha512-BaAGJOq8Fl6/cck6obmwaNLksuY0Bg/lIahCLhJPGXBFUD2mCffypa4A592MaWnDcye7eaHmSK9yot0pxctY8A=="
+  "resolved" "https://registry.npmjs.org/puppeteer/-/puppeteer-21.5.2.tgz"
+  "version" "21.5.2"
   dependencies:
     "@puppeteer/browsers" "1.8.0"
     "cosmiconfig" "8.3.6"
-    "puppeteer-core" "21.5.1"
+    "puppeteer-core" "21.5.2"
 
 "queue-tick@^1.0.1":
   "integrity" "sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag=="
@@ -602,9 +602,9 @@
   "version" "0.6.1"
 
 "streamx@^2.15.0":
-  "integrity" "sha512-b62pAV/aeMjUoRN2C/9F0n+G8AfcJjNC0zw/ZmOHeFsIe4m4GzjVW9m6VHXVjk536NbdU9JRwKMJRfkc+zUFTg=="
-  "resolved" "https://registry.npmjs.org/streamx/-/streamx-2.15.2.tgz"
-  "version" "2.15.2"
+  "integrity" "sha512-9thPGMkKC2GctCzyCUjME3yR03x2xNo0GPKGkRw2UMYN+gqWa9uqpyNWhmsNCutU5zHmkUum0LsCRQTXUgUCAg=="
+  "resolved" "https://registry.npmjs.org/streamx/-/streamx-2.15.5.tgz"
+  "version" "2.15.5"
   dependencies:
     "fast-fifo" "^1.1.0"
     "queue-tick" "^1.0.1"
