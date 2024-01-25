@@ -3,11 +3,11 @@
 
 
 "@babel/code-frame@^7.0.0":
-  "integrity" "sha512-XktuhWlJ5g+3TJXc5upd9Ks1HutSArik6jf2eAjYFyIOf4ej3RN+184cZbzDvbPnuTJIUhPKKJE3cIsYTiAT3w=="
-  "resolved" "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.22.13.tgz"
-  "version" "7.22.13"
+  "integrity" "sha512-CgH3s1a96LipHCmSUmYFPwY7MNx8C3avkq7i4Wl3cfa662ldtUe4VM1TPXX70pfmrlWTb6jLqTYrZyT2ZTJBgA=="
+  "resolved" "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.23.5.tgz"
+  "version" "7.23.5"
   dependencies:
-    "@babel/highlight" "^7.22.13"
+    "@babel/highlight" "^7.23.4"
     "chalk" "^2.4.2"
 
 "@babel/helper-validator-identifier@^7.22.20":
@@ -15,10 +15,10 @@
   "resolved" "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.22.20.tgz"
   "version" "7.22.20"
 
-"@babel/highlight@^7.22.13":
-  "integrity" "sha512-dkdMCN3py0+ksCgYmGG8jKeGA/8Tk+gJwSYYlFGxG5lmhfKNoAy004YpLxpS1W2J8m/EK2Ew+yOs9pVRwO89mg=="
-  "resolved" "https://registry.npmjs.org/@babel/highlight/-/highlight-7.22.20.tgz"
-  "version" "7.22.20"
+"@babel/highlight@^7.23.4":
+  "integrity" "sha512-acGdbYSfp2WheJoJm/EBBBLh/ID8KDc64ISZ9DYtBmC8/Q204PZJLHyzeB5qMzJ5trcOkybd78M4x2KWsUq++A=="
+  "resolved" "https://registry.npmjs.org/@babel/highlight/-/highlight-7.23.4.tgz"
+  "version" "7.23.4"
   dependencies:
     "@babel/helper-validator-identifier" "^7.22.20"
     "chalk" "^2.4.2"
@@ -43,9 +43,9 @@
   "version" "0.23.0"
 
 "@types/node@*":
-  "integrity" "sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw=="
-  "resolved" "https://registry.npmjs.org/@types/node/-/node-20.10.6.tgz"
-  "version" "20.10.6"
+  "integrity" "sha512-+EOokTnksGVgip2PbYbr3xnR7kZigh4LbybAfBAw5BpnQ+FqBYUsvCEjYd70IXKlbohQ64mzEYmMtlWUY8q//Q=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-20.11.6.tgz"
+  "version" "20.11.6"
   dependencies:
     "undici-types" "~5.26.4"
 
@@ -136,10 +136,10 @@
     "escape-string-regexp" "^1.0.5"
     "supports-color" "^5.3.0"
 
-"chromium-bidi@0.5.2":
-  "integrity" "sha512-PbVOSddxgKyj+JByqavWMNqWPCoCaT6XK5Z1EFe168sxnB/BM51LnZEPXSbFcFAJv/+u2B4XNTs9uXxy4GW3cQ=="
-  "resolved" "https://registry.npmjs.org/chromium-bidi/-/chromium-bidi-0.5.2.tgz"
-  "version" "0.5.2"
+"chromium-bidi@0.5.4":
+  "integrity" "sha512-p9CdiHl0xNh4P7oVa44zXgJJw+pvnHXFDB+tVdo25xaPLgQDVf2kQO+TDxD2fp2Evqi7vs/vGRINMzl1qJrWiw=="
+  "resolved" "https://registry.npmjs.org/chromium-bidi/-/chromium-bidi-0.5.4.tgz"
+  "version" "0.5.4"
   dependencies:
     "mitt" "3.0.1"
     "urlpattern-polyfill" "9.0.0"
@@ -177,15 +177,15 @@
   "resolved" "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz"
   "version" "1.1.3"
 
-"cosmiconfig@8.3.6":
-  "integrity" "sha512-kcZ6+W5QzcJ3P1Mt+83OUv/oHFqZHIx8DuxG6eZ5RGMERoLqp4BuGjhHLYGK+Kf5XVkQvqBSmAy/nGWN3qDgEA=="
-  "resolved" "https://registry.npmjs.org/cosmiconfig/-/cosmiconfig-8.3.6.tgz"
-  "version" "8.3.6"
+"cosmiconfig@9.0.0":
+  "integrity" "sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg=="
+  "resolved" "https://registry.npmjs.org/cosmiconfig/-/cosmiconfig-9.0.0.tgz"
+  "version" "9.0.0"
   dependencies:
+    "env-paths" "^2.2.1"
     "import-fresh" "^3.3.0"
     "js-yaml" "^4.1.0"
     "parse-json" "^5.2.0"
-    "path-type" "^4.0.0"
 
 "cross-fetch@4.0.0":
   "integrity" "sha512-e4a5N8lVvuLgAWgnCrLr2PP0YyDOTHa9H/Rj54dirp61qXnNq46m82bRhNqIA5VccJtWBvPTFRV3TtvHUKPB1g=="
@@ -215,10 +215,10 @@
     "escodegen" "^2.1.0"
     "esprima" "^4.0.1"
 
-"devtools-protocol@*", "devtools-protocol@0.0.1203626":
-  "integrity" "sha512-nEzHZteIUZfGCZtTiS1fRpC8UZmsfD1SiyPvaUNvS13dvKf666OAm8YTi0+Ca3n1nLEyu49Cy4+dPWpaHFJk9g=="
-  "resolved" "https://registry.npmjs.org/devtools-protocol/-/devtools-protocol-0.0.1203626.tgz"
-  "version" "0.0.1203626"
+"devtools-protocol@*", "devtools-protocol@0.0.1232444":
+  "integrity" "sha512-pM27vqEfxSxRkTMnF+XCmxSEb6duO5R+t8A9DEEJgy4Wz2RVanje2mmj99B6A3zv2r/qGfYlOvYznUhuokizmg=="
+  "resolved" "https://registry.npmjs.org/devtools-protocol/-/devtools-protocol-0.0.1232444.tgz"
+  "version" "0.0.1232444"
 
 "emoji-regex@^8.0.0":
   "integrity" "sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A=="
@@ -231,6 +231,11 @@
   "version" "1.4.4"
   dependencies:
     "once" "^1.4.0"
+
+"env-paths@^2.2.1":
+  "integrity" "sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A=="
+  "resolved" "https://registry.npmjs.org/env-paths/-/env-paths-2.2.1.tgz"
+  "version" "2.2.1"
 
 "error-ex@^1.3.1":
   "integrity" "sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g=="
@@ -496,11 +501,6 @@
     "json-parse-even-better-errors" "^2.3.0"
     "lines-and-columns" "^1.1.6"
 
-"path-type@^4.0.0":
-  "integrity" "sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw=="
-  "resolved" "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
-  "version" "4.0.0"
-
 "pend@~1.2.0":
   "integrity" "sha512-F3asv42UuXchdzt+xXqfW1OGlVBe+mxa2mqI0pg5yAHZPvFmY3Y6drSf/GQ1A86WgWEN9Kzh/WrgKa6iGcHXLg=="
   "resolved" "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz"
@@ -538,26 +538,26 @@
     "end-of-stream" "^1.1.0"
     "once" "^1.3.1"
 
-"puppeteer-core@21.7.0":
-  "integrity" "sha512-elPYPozrgiM3phSy7VDUJCVWQ07SPnOm78fpSaaSNFoQx5sur/MqhTSro9Wz8lOEjqCykGC6WRkwxDgmqcy1dQ=="
-  "resolved" "https://registry.npmjs.org/puppeteer-core/-/puppeteer-core-21.7.0.tgz"
-  "version" "21.7.0"
+"puppeteer-core@21.9.0":
+  "integrity" "sha512-QgowcczLAoLWlV38s3y3VuEvjJGfKU5rR6Q23GUbiGOaiQi+QpaWQ+aXdzP9LHVSUPmHdAaWhcvMztYSw3f8gQ=="
+  "resolved" "https://registry.npmjs.org/puppeteer-core/-/puppeteer-core-21.9.0.tgz"
+  "version" "21.9.0"
   dependencies:
     "@puppeteer/browsers" "1.9.1"
-    "chromium-bidi" "0.5.2"
+    "chromium-bidi" "0.5.4"
     "cross-fetch" "4.0.0"
     "debug" "4.3.4"
-    "devtools-protocol" "0.0.1203626"
+    "devtools-protocol" "0.0.1232444"
     "ws" "8.16.0"
 
-"puppeteer@^21.7.0":
-  "integrity" "sha512-Yy+UUy0b9siJezbhHO/heYUoZQUwyqDK1yOQgblTt0l97tspvDVFkcW9toBlnSvSfkDmMI3Dx9cZL6R8bDArHA=="
-  "resolved" "https://registry.npmjs.org/puppeteer/-/puppeteer-21.7.0.tgz"
-  "version" "21.7.0"
+"puppeteer@^21.9.0":
+  "integrity" "sha512-vcLR81Rp+MBrgqhiXZfpwEBbyKTa88Hd+8Al3+emWzcJb9evLLSfUYli0QUqhofPFrXsO2A/dAF9OunyOivL6w=="
+  "resolved" "https://registry.npmjs.org/puppeteer/-/puppeteer-21.9.0.tgz"
+  "version" "21.9.0"
   dependencies:
     "@puppeteer/browsers" "1.9.1"
-    "cosmiconfig" "8.3.6"
-    "puppeteer-core" "21.7.0"
+    "cosmiconfig" "9.0.0"
+    "puppeteer-core" "21.9.0"
 
 "queue-tick@^1.0.1":
   "integrity" "sha512-kJt5qhMxoszgU/62PLP1CJytzd2NKetjSRnyuj31fDd3Rlcz3fzlFdFLD1SItunPwyqEOkca6GbV612BWfaBag=="
@@ -642,9 +642,9 @@
     "tar-stream" "^3.1.5"
 
 "tar-stream@^3.1.5":
-  "integrity" "sha512-B/UyjYwPpMBv+PaFSWAmtYjwdrlEaZQEhMIBFNC5oEG8lpiW8XjcSdmEaClj28ArfKScKHs2nshz3k2le6crsg=="
-  "resolved" "https://registry.npmjs.org/tar-stream/-/tar-stream-3.1.6.tgz"
-  "version" "3.1.6"
+  "integrity" "sha512-qJj60CXt7IU1Ffyc3NJMjh6EkuCFej46zUqJ4J7pqYlThyd9bO0XBTmcOIhSzZJVWfsLks0+nle/j538YAW9RQ=="
+  "resolved" "https://registry.npmjs.org/tar-stream/-/tar-stream-3.1.7.tgz"
+  "version" "3.1.7"
   dependencies:
     "b4a" "^1.6.4"
     "fast-fifo" "^1.2.0"

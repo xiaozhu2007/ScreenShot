@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "puppeteer": "^21.7.0",
+    "puppeteer": "^21.9.0",
     "yarn": "1.22.19"
   }
 }
