@@ -50,11 +50,11 @@ async function snap(url, id) {
     //page.waitForTimeout(8000).then(() => console.log('[INFO] 已等待 8 秒钟, 开始截图')); // 考虑到部分网站 JavaScript 加载延时
 
     try {
-      await page.screenshot({ path: `./snap/${year}/${month}/${id}/${date}/${dateObject.getHours()}.png`, fullPage: false});
-      await page.screenshot({ path: `./snap/${year}/${month}/${id}/${date}/${dateObject.getHours()}-full.png`, fullPage: true});
+      await page.screenshot({ path: `./snap/${year}/${month}/${date}/${id}-${dateObject.getHours()}.png`, fullPage: false});
+      await page.screenshot({ path: `./snap/${year}/${month}/${date}/${id}-${dateObject.getHours()}-full.png`, fullPage: true});
 
       await page.pdf({
-          path: `./pdf/${year}/${month}/${id}/${date}/${dateObject.getHours()}.pdf`,
+          path: `./pdf/${year}/${month}/${date}/${id}-${dateObject.getHours()}.pdf`,
           format: 'a4',
         });
     } catch (e) {}
